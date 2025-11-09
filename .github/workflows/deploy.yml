@@ -16,8 +16,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Upload Pages artifact
-        # Use v2 to avoid depending on deprecated upload-artifact v3
-        uses: actions/upload-pages-artifact@v2
+        # Use v3 which depends on upload-artifact v4 (avoids deprecated v3)
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
